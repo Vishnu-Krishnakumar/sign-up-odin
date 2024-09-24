@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel ="stylesheet" href = "styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="container">
+        <section id="img-side">
+            <div id="logo">
+                <img  src =" https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+                <span>ODIN</span>
+            </div>
+        </section>
+        <section id ="main">
+            <div id ="intro-info">
+                <p>This is not a real online service!
+                    You know you need something like this in your life to help you realize your deepest dreams.
+                    Sign up <span>now</span> to get started.
+                </p>
+                <p>You <span>know</span> want to.</p>
+            </div>
+            <div id = "form-input">
+                <p>Let's do this!</p>
+                <form id ="info"action ="" method="post">
+                    <div>
+                        <label for="first_name">FIRST NAME</label>
+                        <input type ="text" id = "first_name">
+
+                        <label for="emai">EMAIL</label>
+                        <input type ="text" id ="email">
+
+                        <label for="password">PASSWORD</label>
+                        <input type ="password" id ="password">
+                        <span id="passwordError" class="error"></span>
+                    </div>
+                    <div>
+                        <label for="last_name">LAST NAME</label>
+                        <input type ="text" id = "last_name">
+                    
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type ="text" id ="phone_number">
+
+                        <label for="password_confirm">CONFIRM PASSWORD</label>
+                        <input type ="password" id ="password_conf">
+                        
+                    </div>
+                    
+                   
+                </form>
+            </div>
+            <div id ="confirmation">
+                <button type ="submit" form ="info">Create Account</button>
+                <p>Already have an account? <a href =" s">Log in</a></p> 
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector("#password").addEventListener("input", function(){
+            validatePassword();
+        })
+        document.querySelector("#password_conf").addEventListener("input", function(){
+            validatePassword();
+        })
+        function validatePassword(){
+            const password = document.getElementById("password").value;
+            const password_confirm = document.getElementById("password_conf").value;
+            const errorElement = document.getElementById('passwordError');
+            if (password !== password_confirm) {
+                errorElement.textContent = '*Passwords do not match';
+                errorElement.classList.remove('success');
+                errorElement.classList.add('error');
+                isValid = false;
+            } else {
+                errorElement.textContent = 'Passwords match';
+                errorElement.classList.remove('error');
+                errorElement.classList.add('success');
+            }
+        }
+    </script>
+</body>
+</html>
