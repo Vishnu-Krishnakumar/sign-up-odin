@@ -1,0 +1,131 @@
+body{
+    background-color:rgb(61, 60, 60) ;
+}
+#container{
+    height:100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#img-side{
+    display:flex;
+    height:900px;
+    width:500px;
+    background-image: url("https://tinyurl.com/475ayfsc");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+}
+
+#logo{
+    display: flex;  
+    width:500px;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+    margin-top:200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+#logo span{
+    color: white;
+    font-size: 50px;
+}
+img{
+    height:100px;
+    width:100px;
+   
+}
+#main{
+    width:800px;
+    height:900px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#intro-info{
+    background-color: aliceblue;
+    
+
+}
+#intro-info p{
+    width:500px;
+}
+#intro-info span{
+    font-style: italic;
+}
+p{
+    margin-left: 30px;
+    margin-right: 35px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#form-input{
+    background-color: white;
+}
+#info{
+    display: flex;
+    gap:50px;
+}
+label,input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 35px;
+}
+input{
+    width:200px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+input:focus{
+    box-shadow:grey 1px 1px ;
+}
+label{
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+#intro-info{
+    display:flex;
+    flex-direction: column;
+    height:300px;
+    justify-content: flex-end;
+}
+#form-input{
+    height:300px;
+}
+#confirmation{
+    height:300px;
+    background-color: aliceblue;
+}
+#confirmation p{
+    
+    margin-left: 30px;
+    margin-right: 35px;
+    font-size: 20px;
+    font-weight: 200;
+}
+button{
+    border-radius: 10px;
+    color: white;
+    background-color: #596D48;
+    padding:10px 40px;
+    margin:30px;
+    font-size: 20px;
+}
+a:link{
+    font-weight: bold;
+    text-decoration: none;
+    color: #596D48;
+}
+.error, .success{
+    margin-left: 30px;
+    margin-right: 35px;
+}
+.error{
+    color:red;
+}
